@@ -13,51 +13,51 @@
 	}
 
 	getData = () => {
-		return new Promise((resolve) => {
-			HELPER.ajax({
-				url: HELPER.api.getData,
-				success: (response) => {
-					$.each(response, (i,v) => {
-						$('#'+i).html(v);
-					});
-					createChartDokument(response.chartDokument);
-					resolve(true);
-				}
-			})
-		});
+		// return new Promise((resolve) => {
+		// 	HELPER.ajax({
+		// 		url: HELPER.api.getData,
+		// 		success: (response) => {
+		// 			$.each(response, (i,v) => {
+		// 				$('#'+i).html(v);
+		// 			});
+		// 			createChartDokument(response.chartDokument);
+		// 			resolve(true);
+		// 		}
+		// 	})
+		// });
 	}
 
-	createChartDokument = (dataXY) => {
-		am5.ready(function() {
-			var root = am5.Root.new("kt_amcharts_3");
-			root.setThemes([
-				am5themes_Animated.new(root)
-			]);
+	// createChartDokument = (dataXY) => {
+	// 	am5.ready(function() {
+	// 		var root = am5.Root.new("kt_amcharts_3");
+	// 		root.setThemes([
+	// 			am5themes_Animated.new(root)
+	// 		]);
 
-			var chart = root.container.children.push(
-				am5percent.PieChart.new(root, {
-					endAngle: 270
-				})
-			);
+	// 		var chart = root.container.children.push(
+	// 			am5percent.PieChart.new(root, {
+	// 				endAngle: 270
+	// 			})
+	// 		);
 
-			var series = chart.series.push(
-				am5percent.PieSeries.new(root, {
-					valueField: "value",
-					categoryField: "category",
-					endAngle: 270
-				})
-			);
+	// 		var series = chart.series.push(
+	// 			am5percent.PieSeries.new(root, {
+	// 				valueField: "value",
+	// 				categoryField: "category",
+	// 				endAngle: 270
+	// 			})
+	// 		);
 
-			series.states.create("hidden", {
-				endAngle: 0
-			});
+	// 		series.states.create("hidden", {
+	// 			endAngle: 0
+	// 		});
 
-			series.data.setAll(dataXY);
+	// 		series.data.setAll(dataXY);
 
-			series.appear(1000, 100);
+	// 		series.appear(1000, 100);
 
-		});
-	}
+	// 	});
+	// }
 	onPaket = () => {
 		$('[data-con="mms9mjrsvdbcucg6"]').trigger('click')
 	}
