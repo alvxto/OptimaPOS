@@ -1,16 +1,16 @@
 <script type="text/javascript">
-    var table = 'tableProgram';
-    var form = 'formProgram';
+    var table = 'tableKategori';
+    var form = 'formKategori';
 
     $(() => {
         HELPER.fields = ['id'];
 
         HELPER.api = {
-            index: APP_URL + 'program',
-            store: APP_URL + 'program/store',
-            show: APP_URL + 'program/show',
-            update: APP_URL + 'program/update',
-            destroy: APP_URL + 'program/destroy',
+            index: APP_URL + 'kategori',
+            store: APP_URL + 'kategori/store',
+            show: APP_URL + 'kategori/show',
+            update: APP_URL + 'kategori/update',
+            destroy: APP_URL + 'kategori/destroy',
         };
 
         HELPER.handleValidation({
@@ -55,20 +55,20 @@
                 }, {
                     targets: 1,
                     render: function(data, type, full, meta) {
-                        return full.program_kode;
+                        return full.kategori_kode;
 
                     }
                 }, {
                     targets: 2,
                     render: function(data, type, full, meta) {
-                        return full.program_nama;
+                        return full.kategori_nama;
                     }
                 }, {
                     targets: -1,
                     render: function(data, type, full, meta) {
                         var status = 'active';
                         var bg = 'success';
-                        if (full.program_aktif != 1) {
+                        if (full.kategori_aktif != 1) {
                             status = 'not active';
                             bg = 'danger';
                         }

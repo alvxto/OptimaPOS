@@ -1,14 +1,14 @@
-<div class="row" data-roleable="false" data-role="Program-Read">
+<div class="row" data-roleable="false" data-role="Kategori-Read">
 	
 	<div class="col-xl-5">
-		<?= loadView('BackEnd/Program/Views/form') ?>
+		<?= loadView('BackEnd/Kategori/Views/form') ?>
 	</div>
 
 	<div class="col-xl-7">
 		<div class="card card-bordered">
 		    <div class="card-body">
 		    	<div class="table-responsive">
-					<table class="table table-striped table-row-bordered border align-middle rounded tdFirstCenter" id="tableProgram">
+					<table class="table table-striped table-row-bordered border align-middle rounded tdFirstCenter" id="tableKategori">
 						<thead>
 							<tr class="fw-bolder text-muted bg-light">
 								<th class="ps-4" width="20">No</th>
@@ -27,4 +27,4 @@
 
 </div>
 
-<?= loadView('BackEnd/Program/Views',['javascript']) ?>
+<?= loadView('BackEnd/Kategori/Views',['javascript']) ?>

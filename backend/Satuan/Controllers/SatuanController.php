@@ -9,7 +9,7 @@ class SatuanController extends \App\Core\BaseController
 {
 	public function index()
 	{
-		$operation = (new Satuan(request()))->draw(true);
+		$operation = (new Satuan(request()))->setMode('datatable')->draw(true);
 		return $this->respond($operation);
 	}
 
@@ -23,9 +23,8 @@ class SatuanController extends \App\Core\BaseController
 	public function store()
 	{
 		$data = getVar(null, 'satuan');
-		$data['satuan_aktif'] = ((isset($data['satuan_aktif']) && $data['satuan_aktif'] == 1) ? 1 : 0);
-		$data['satuan_created_at'] = date('Y-m-d H:i:s');
-		$data['satuan_created_by'] = session()->UserId;
+		// $data['satuan_created_at'] = date('Y-m-d H:i:s');
+		$data['satuan_user_id'] = session()->UserId;
 		$operation = (new Satuan())->insert($data);
 		return $this->respondCreated($operation);
 	}
