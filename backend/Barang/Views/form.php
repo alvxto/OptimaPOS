@@ -1,4 +1,4 @@
-<form action="javascript:onSave()" method="post" id="formProgram" name="formProgram" autocomplete="off" enctype="multipart/form-data">
+<form action="javascript:onSave()" method="post" id="formBarang" name="formBarang" autocomplete="off" enctype="multipart/form-data">
 	<div class="card card-bordered">
 		<div class="card-body">
 			<input type="hidden" name="id">
@@ -7,11 +7,19 @@
 				<div class="tab-pane fade show active" id="tabGeneral" role="tabpanel">
 					<div class="fv-row mb-5">
 						<label for="" class="required form-label">Kode</label>
-						<input type="text" name="kode" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Kode Program" required />
+						<input type="text" name="kode" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Kode Barang" required />
 					</div>
 					<div class="fv-row mb-5">
 						<label for="" class="required form-label">Nama</label>
-						<input type="text" name="nama" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Program" required />
+						<input type="text" name="nama" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
+					</div>
+					<div class="fv-row mb-5">
+						<label for="" class="required form-label">Stok</label>
+						<input type="text" name="stok" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
+					</div>
+					<div class="fv-row mb-5">
+						<label for="" class="required form-label">Harga</label>
+						<input type="text" name="harga" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
 					</div>
 
 					<div class="fv-row mb-5">

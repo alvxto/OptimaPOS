@@ -1,16 +1,16 @@
 <script type="text/javascript">
-    var table = 'tableSatuan';
-    var form = 'formSatuan';
+    var table = 'tableBarang';
+    var form = 'formBarang';
 
     $(() => {
         HELPER.fields = ['id'];
 
         HELPER.api = {
-            index: APP_URL + 'satuan',
-            store: APP_URL + 'satuan/store',
-            show: APP_URL + 'satuan/show',
-            update: APP_URL + 'satuan/update',
-            destroy: APP_URL + 'satuan/destroy',
+            index: APP_URL + 'barang',
+            store: APP_URL + 'barang/store',
+            show: APP_URL + 'barang/show',
+            update: APP_URL + 'barang/update',
+            destroy: APP_URL + 'barang/destroy',
         };
 
         HELPER.handleValidation({
@@ -55,13 +55,25 @@
                 }, {
                     targets: 1,
                     render: function(data, type, full, meta) {
-                        return full.satuan_nama;
+                        return full.barang_kode;
 
                     }
                 }, {
                     targets: 2,
                     render: function(data, type, full, meta) {
-                        return full.satuan_keterangan;
+                        return full.barang_nama;
+                    }
+                }, {
+                    targets: -1,
+                    render: function(data, type, full, meta) {
+                        var status = 'active';
+                        var bg = 'success';
+                        if (full.barang_aktif != 1) {
+                            status = 'not active';
+                            bg = 'danger';
+                        }
+
+                        return `<span class="badge px-2 badge-light-${bg}">${status}</span>`;
                     }
                 }, ],
                 fnCreatedRow: function(nRow, aData, iDataIndex) {

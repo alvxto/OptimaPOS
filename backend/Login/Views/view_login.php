@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>E-Kontrak - Login App</title>
+	<title>Optima POS - Login App</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" href="{url}/file/logo" />
@@ -22,14 +22,14 @@
 						<div class="mb-5">
 							<div class="d-flex justify-content-between">
 								<div class="d-flex align-items-end">
-									<img src="{url}/file/logo" alt="E-kontrak Logo" style="width: clamp(50px,4vw,100px);" />
-									<h1 class="text-gray-900 fw-bolder m-0" style="font-size: 2em;font-weight: 800!important;">E-Kontrak</h1>
+									<img src="{url}/file/logo" alt="POS Logo" style="width: clamp(50px,4vw,100px);" />
+									<h1 class="text-gray-900 fw-bolder m-0" style="font-size: 2em;font-weight: 800!important;">OPTIMA POS</h1>
 								</div>
-								<img src="malangMakmur.png" alt="E-kontrak Logo" class="align-self-end" />
+								<!-- <img src="malangMakmur.png" alt="E-kontrak Logo" class="align-self-end" /> -->
 							</div>
 							<br>
 							<h5 class="text-gray-600 fw-bold">
-								Selamat datang di Aplikasi E-Kontrak
+								Selamat datang di Aplikasi Optima POS
 							</h5>
 							<br>
 						</div>
