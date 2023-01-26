@@ -55,12 +55,12 @@
 					<li class="nav-item mt-2">
 						<a class="nav-link text-active-primary ms-0 me-10 py-5 active tabConfig cp" data-group="app" onclick="showConfig(this)">Website</a>
 					</li>
-					<li class="nav-item mt-2">
+					<!-- <li class="nav-item mt-2">
 						<a class="nav-link text-active-primary ms-0 me-10 py-5 active tabConfig cp" data-group="general" onclick="showConfig(this)">General</a>
 					</li>
 					<li class="nav-item mt-2">
 						<a class="nav-link text-active-primary ms-0 me-10 py-5 tabConfig cp" data-group="email" onclick="showConfig(this)">Email</a>
-					</li>
+					</li> -->
 					<li class="nav-item mt-2">
 						<a class="nav-link text-active-primary ms-0 me-10 py-5 tabConfig cp" data-group="google_recaptcha" onclick="showConfig(this)">Google Chaptcha</a>
 					</li>

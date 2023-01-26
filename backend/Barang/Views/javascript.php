@@ -11,6 +11,7 @@
             show: APP_URL + 'barang/show',
             update: APP_URL + 'barang/update',
             destroy: APP_URL + 'barang/destroy',
+            getData: APP_URL + 'barang/getData',
         };
 
         HELPER.handleValidation({
@@ -23,7 +24,33 @@
 
     index = async () => {
         await initTable();
+        await getData();
         await HELPER.unblock(100);
+    }
+
+    getData = () => {
+        return new Promise((resolve, reject) => {
+            HELPER.ajax({
+                url: HELPER.api.getData,
+                success: (response) => {
+                    resolve(true);
+                    HELPER.setDataMultipleCombo([{
+                        data: response.kategori,
+                        el: 'kategoriId',
+                        valueField: 'kategori_id',
+                        displayField: 'kategori_nama',
+                        placeholder: 'Pilih Kategori'
+                    }, ]);
+                    HELPER.setDataMultipleCombo([{
+                        data: response.satuan,
+                        el: 'satuanId',
+                        valueField: 'satuan_id',
+                        displayField: 'satuan_nama',
+                        placeholder: 'Pilih Satuan'
+                    }, ]);
+                }
+            });
+        });
     }
 
     initTable = () => {
@@ -43,39 +70,50 @@
                     }
                 },
                 columnDefs: [{
-                    orderable: false,
-                    targets: [0, -1]
-                }, {
-                    targets: 0,
-                    render: function(data, type, full, meta) {
-                        return `
+                        orderable: false,
+                        targets: [0, -1]
+                    }, {
+                        targets: 0,
+                        render: function(data, type, full, meta) {
+                            return `
 						<small>${full.no}</small>
 					`;
-                    }
-                }, {
-                    targets: 1,
-                    render: function(data, type, full, meta) {
-                        return full.barang_kode;
-
-                    }
-                }, {
-                    targets: 2,
-                    render: function(data, type, full, meta) {
-                        return full.barang_nama;
-                    }
-                }, {
-                    targets: -1,
-                    render: function(data, type, full, meta) {
-                        var status = 'active';
-                        var bg = 'success';
-                        if (full.barang_aktif != 1) {
-                            status = 'not active';
-                            bg = 'danger';
                         }
+                    }, {
+                        targets: 1,
+                        render: function(data, type, full, meta) {
+                            return full.barang_kode;
 
-                        return `<span class="badge px-2 badge-light-${bg}">${status}</span>`;
-                    }
-                }, ],
+                        }
+                    }, {
+                        targets: 2,
+                        render: function(data, type, full, meta) {
+                            return full.barang_nama;
+                        }
+                    }, {
+                        targets: 3,
+                        render: function(data, type, full, meta) {
+                            return full.barang_stok;
+                        }
+                    }, {
+                        targets: 4,
+                        render: function(data, type, full, meta) {
+                            return full.barang_harga;
+                        }
+                    }, {
+                        targets: -1,
+                        render: function(data, type, full, meta) {
+                            var status = 'active';
+                            var bg = 'success';
+                            if (full.barang_aktif != 1) {
+                                status = 'not active';
+                                bg = 'danger';
+                            }
+
+                            return `<span class="badge px-2 badge-light-${bg}">${status}</span>`;
+                        }
+                    },
+                ],
                 fnCreatedRow: function(nRow, aData, iDataIndex) {
                     $(nRow).attr('id', aData[0]);
                 },

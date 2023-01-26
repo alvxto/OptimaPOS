@@ -6,34 +6,8 @@
 			<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade show active" id="tabGeneral" role="tabpanel">
 					<div class="fv-row mb-5">
-						<label for="" class="required form-label">Kode</label>
-						<input type="text" name="kode" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Kode Barang" required />
-					</div>
-					<div class="fv-row mb-5">
 						<label for="" class="required form-label">Nama</label>
 						<input type="text" name="nama" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
-					</div>
-					<div class="fv-row mb-5">
-						<label for="" class="required form-label">Stok</label>
-						<input type="text" name="stok" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
-					</div>
-					<div class="fv-row mb-5">
-						<label for="" class="required form-label">Harga</label>
-						<input type="text" name="harga" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
-					</div>
-
-					<div class="fv-row mb-5">
-						<label for="" class="form-label">Keterangan</label>
-						<textarea name="keterangan" id="keterangan" class="form-control form-control-sm form-control-solid" placeholder="Keterangan"></textarea>
-					</div>
-					<div class="fv-row mb-5">
-						<label for="" class="form-label">Status</label>
-						<div class="form-check form-check-custom form-check-solid">
-							<input name="aktif" class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" checked="checked" />
-							<label class="form-check-label" for="flexCheckChecked">
-								Active
-							</label>
-						</div>
 					</div>
 				</div>
 			</div>

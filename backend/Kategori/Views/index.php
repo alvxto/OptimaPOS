@@ -12,9 +12,7 @@
 						<thead>
 							<tr class="fw-bolder text-muted bg-light">
 								<th class="ps-4" width="20">No</th>
-								<th width="50">Kode</th>
 								<th>Nama</th>
-								<th>Status</th>
 							</tr>
 						</thead>
 						<tbody></tbody>
