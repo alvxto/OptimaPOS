@@ -23,9 +23,9 @@ class KategoriController extends \App\Core\BaseController
 	public function store()
 	{
 		$data = getVar(null, 'kategori');
-		$data['kategori_aktif'] = ((isset($data['kategori_aktif']) && $data['kategori_aktif'] == 1) ? 1 : 0);
-		$data['kategori_created_at'] = date('Y-m-d H:i:s');
-		$data['kategori_created_by'] = session()->UserId;
+		// $data['kategori_aktif'] = ((isset($data['kategori_aktif']) && $data['kategori_aktif'] == 1) ? 1 : 0);
+		// $data['kategori_created_at'] = date('Y-m-d H:i:s');
+		$data['kategori_user_id'] = session()->UserId;
 		$operation = (new Kategori())->insert($data);
 		return $this->respondCreated($operation);
 	}

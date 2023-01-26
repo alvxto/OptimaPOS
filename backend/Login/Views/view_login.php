@@ -36,7 +36,7 @@
 						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
 							<div class="fv-row mb-5">
 								<label class="form-label fs-7 fw-bolder text-dark">Username</label>
-								<input class="form-control form-control-sm form-control" type="text" name="Username" value="appstarter@gmail.com" placeholder="Masukkan Username" autocomplete="off" />
+								<input class="form-control form-control-sm form-control" type="text" name="Username" value="admin" placeholder="Masukkan Username" autocomplete="off" />
 							</div>
 							<div class="fv-row mb-10">
 								<div class="d-flex justify-content-between mb-1">
@@ -46,7 +46,7 @@
 									</a> -->
 								</div>
 								<i id="mata" onclick="showPassword()" style="position:absolute;right:20px;bottom:11px;" class="fa fa-eye"></i>
-								<input class="form-control mb-5 form-control-sm form-control" type="password" name="Password" id="Password" value="@appstarter12345" placeholder="Masukkan Password" autocomplete="off" />
+								<input class="form-control mb-5 form-control-sm form-control" type="password" name="Password" id="Password" value="admin" placeholder="Masukkan Password" autocomplete="off" />
 							</div>
 							<div class="fv-row mb-10">
 								<div class="g-recaptcha" id="captcha" data-sitekey="{siteKey}"></div>

@@ -13,7 +13,6 @@
 							<tr class="fw-bolder text-muted bg-light">
 								<th class="ps-4" width="20">No</th>
 								<th>Name</th>
-								<th>Bidang</th>
 								<th>Role</th>
 								<th width="80">Status</th>
 							</tr>

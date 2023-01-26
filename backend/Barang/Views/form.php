@@ -21,10 +21,13 @@
 						<label for="" class="required form-label">Harga</label>
 						<input type="text" name="harga" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Nama Barang" required />
 					</div>
-
 					<div class="fv-row mb-5">
-						<label for="" class="form-label">Keterangan</label>
-						<textarea name="keterangan" id="keterangan" class="form-control form-control-sm form-control-solid" placeholder="Keterangan"></textarea>
+						<label for="" class="required form-label">Kategori</label>
+						<select name="kategoriId" id="kategoriId" class="form-select form-select-sm form-select-solid" aria-label="Kegiatan" required></select>
+					</div>
+					<div class="fv-row mb-5">
+						<label for="" class="required form-label">Satuan</label>
+						<select name="satuanId" id="satuanId" class="form-select form-select-sm form-select-solid" aria-label="Kegiatan" required></select>
 					</div>
 					<div class="fv-row mb-5">
 						<label for="" class="form-label">Status</label>

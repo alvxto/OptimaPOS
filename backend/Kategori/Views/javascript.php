@@ -55,27 +55,10 @@
                 }, {
                     targets: 1,
                     render: function(data, type, full, meta) {
-                        return full.kategori_kode;
-
-                    }
-                }, {
-                    targets: 2,
-                    render: function(data, type, full, meta) {
                         return full.kategori_nama;
-                    }
-                }, {
-                    targets: -1,
-                    render: function(data, type, full, meta) {
-                        var status = 'active';
-                        var bg = 'success';
-                        if (full.kategori_aktif != 1) {
-                            status = 'not active';
-                            bg = 'danger';
-                        }
 
-                        return `<span class="badge px-2 badge-light-${bg}">${status}</span>`;
                     }
-                }, ],
+                },],
                 fnCreatedRow: function(nRow, aData, iDataIndex) {
                     $(nRow).attr('id', aData[0]);
                 },

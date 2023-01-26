@@ -94,13 +94,8 @@
 							`;
 
 					}
-				}, {
+				},{
 					targets: 2,
-					render: function(data, type, full, meta) {
-						return full.position_name;
-					}
-				}, {
-					targets: 3,
 					render: function(data, type, full, meta) {
 						return full.role_name;
 					}

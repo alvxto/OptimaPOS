@@ -3,6 +3,8 @@
 namespace BackEnd\Barang\Controllers;
 
 use BackEnd\Barang\Models\Barang;
+use BackEnd\Kategori\Models\Kategori;
+use BackEnd\Satuan\Models\Satuan;
 use Exception;
 
 class BarangController extends \App\Core\BaseController
@@ -25,7 +27,7 @@ class BarangController extends \App\Core\BaseController
 		$data = getVar(null, 'barang');
 		$data['barang_aktif'] = ((isset($data['barang_aktif']) && $data['barang_aktif'] == 1) ? 1 : 0);
 		$data['barang_created_at'] = date('Y-m-d H:i:s');
-		$data['barang_created_by'] = session()->UserId;
+		$data['barang_user_id'] = session()->UserId;
 		$operation = (new Barang())->insert($data);
 		return $this->respondCreated($operation);
 	}
@@ -59,5 +61,15 @@ class BarangController extends \App\Core\BaseController
 				]);
 			}
 		}
+	}
+
+	public function getData()
+	{
+		$kategori = (new Kategori())->findAll();
+		$satuan = (new Satuan())->findAll();
+		return $this->respond([
+			'kategori' => $kategori,
+			'satuan' => $satuan,
+		]);
 	}
 }

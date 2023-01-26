@@ -14,6 +14,8 @@
 								<th class="ps-4" width="20">No</th>
 								<th width="50">Kode</th>
 								<th>Nama</th>
+								<th>Stok</th>
+								<th>Harga</th>
 								<th>Status</th>
 							</tr>
 						</thead>

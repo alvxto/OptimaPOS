@@ -56,10 +56,10 @@
 						<input type="text" name="code" class="form-control form-control-sm form-control-solid" placeholder="Masukkan Kode" required />
 					</div>
 
-					<div class="fv-row mb-5">
+					<!-- <div class="fv-row mb-5">
 						<label for="" class="form-label">Bidang / UPT</label>
 						<select name="bidangId" id="bidangId" class="form-select form-select-sm form-select-solid" aria-label="Positions"></select>
-					</div>
+					</div> -->
 
 					<div class="fv-row mb-5">
 						<label for="" class="form-label">Role</label>

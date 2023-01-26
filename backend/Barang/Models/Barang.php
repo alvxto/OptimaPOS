@@ -13,6 +13,7 @@ class Barang extends \App\Core\BaseModel
         'barang_kode',
         'barang_nama',
         'barang_stok',
+        'barang_harga',
         'barang_kategori_id',
         'barang_satuan_id',
         'barang_aktif',
@@ -27,6 +28,7 @@ class Barang extends \App\Core\BaseModel
                 'barang_nama',
                 'barang_stok',
                 'barang_harga',
+                'barang_aktif',
             ]
         ]
     ];
