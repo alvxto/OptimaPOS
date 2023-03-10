@@ -1,6 +1,8 @@
+# OptimaPOS Website
+
 # Application Starter
 
-The application starter is based on Codeigniter ^4.0 and templates Metronic ^8.0
+The application starter is based on Codeigniter ^4.0
 
 ## Feautures
 
@@ -8,10 +10,6 @@ The application starter is based on Codeigniter ^4.0 and templates Metronic ^8.0
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](http://codeigniter.com).
-
-## Metronic 8
-
-Metronic - #1 Selling Premium Bootstrap Admin Dashboard Theme of All Time.
 
 ## Clone & updates
 
